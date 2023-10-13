@@ -1,18 +1,1445 @@
-/*Estilização da pagina*/
-/*Fonte*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-/*Margens da pagina*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
-    background-color: #FFFFF0;
+    width: 100%;
+    height: auto;
+    background-color: #F4F5F9;
+
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+main{
+    width: 100%;
+    height: auto;
+
+}
+
+.main-inicio{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-inicio-logo{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-inicio-logo-img{
+    width: 23%;
+    height: 70%;
+    background-image: url('../Image/programmer.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.main-inicio-logo-titulo{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+.main-inicio-logo-titulo > h1{
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 4.5px;
+}
+
+.main-inicio-continuar{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.main-inicio-continuar > p{
+    font-weight: 500;
+}
+
+.main-inicio-continuar > a{
+    width: 2.5%;
+    height: 60%;
+    position: absolute;
+    bottom: -30%;
+    cursor: pointer;
+}
+
+header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #90639E;
+    box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    z-index: 3;
+
+}
+
+#header-hambuguer{
+    display: none;
+}
+
+#header-hambuguer{
+    width: 100%;
+    height: 10vh;
+    background-color: #90639E;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.hamburguer-menu{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hamburguer-menu > svg{
+    cursor: pointer;
+}
+
+.hamburguer-logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.hamburguer-logo > img{
+    width: 50%;
+    height: 70%;
 }
 
 
+.opcoes{
+    display: none;
+}
+
+.hamburguer-menu:hover .opcoes{
+    width: 100%;
+    height: 35vh;
+    position: absolute;
+    background-color: #B098C1;
+    bottom: -349%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+}
+
+
+.opcoes > ul{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    list-style: none;
+}
+
+.opcoes > ul > li > a{
+    color: #F4F5F9;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+
+.opcoes-um{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opcoes-um > ul{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.opcoes-um > ul > li > a{
+    color: #F4F5F9;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.opcoes-um > ul > li > a:hover{
+    border-bottom: 2px solid #F4F5F9;
+    
+}
+
+.logo{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo > img{
+    width: 25%;
+}
+
+.main-sobre{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-sobre-titulo{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-sobre-titulo > h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.main-sobre-container{
+    width: 80%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+}
+
+.main-sobre-container-foto{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-sobre-container-foto-container{
+    width: 90%;
+    height: 62%;
+    position: relative;
+    
+}
+
+.main-sobre-container-foto-container-dois{
+    width: 96%;
+    height: 96%;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 8px 8px 25px 15px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+
+.main-sobre-container-foto-container-img{
+    width: 96%;
+    height: 96%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.main-sobre-container-foto-container-img > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.main-sobre-container-texto{
+    width: 50%;
+    height: 62%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 7%;
+    position: relative;
+}
+
+.main-sobre-container-texto-titulo{
+    width: 100%;
+    height: 14%;
+    display: flex;
+    align-items: start;
+}
+
+.main-sobre-container-texto-titulo > h2 > span{
+    font-size: 2rem;
+    color: #B098C1;
+    font-weight: 800;
+
+    
+}
+
+.main-sobre-container-texto-logos{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+
+}
+
+.main-sobre-container-texto-logos-python{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+}
+
+.main-sobre-container-texto-logos-python-logo{
+    width: 75%;
+    height: 80%;
+    background-image: url(../Image/python.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    cursor: pointer;
+}
+
+.main-sobre-container-texto-logos-python-logo-explicacao{
+    display: none;
+}
+
+.main-sobre-container-texto-logos-python-logo:hover .main-sobre-container-texto-logos-python-logo-explicacao{
+    width: 50%;
+    height: 45%;
+    border-radius: 0px 15px 15px 15px;
+    background-color: #B098C1;
+    display: flex;
+    position: absolute;
+    bottom: -35%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.main-sobre-container-texto-logos-python-logo-explicacao-titulo{
+    width: 90%;
+    height: 25%;
+    color: #F4F5F9;
+}
+
+.main-sobre-container-texto-logos-python-logo-explicacao-titulo > h2{
+    border-bottom: 2px solid #F4F5F9; 
+}
+
+.main-sobre-container-texto-logos-python-logo-explicacao > p {
+    width: 90%;
+    height: 70%;
+    font-size: 0.86rem;
+    color: #F4F5F9;
+}
+
+.main-sobre-container-texto-logos-machine{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+}
+
+.main-sobre-container-texto-logos-machine-logo{
+    width: 75%;
+    height: 80%;
+    background-image: url(../Image/machine.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    cursor: pointer;
+}
+
+.main-sobre-container-texto-logos-machine-logo-explicacao{
+    display: none;
+}
+
+.main-sobre-container-texto-logos-machine-logo:hover .main-sobre-container-texto-logos-machine-logo-explicacao{
+    width: 50%;
+    height: 45%;
+    border-radius: 0px 15px 15px 15px;
+    background-color: #B098C1;
+    display: flex;
+    position: absolute;
+    bottom: -35%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.main-sobre-container-texto-logos-machine-logo-explicacao-titulo{
+    width: 90%;
+    height: 25%;
+    color: #F4F5F9;
+}
+
+.main-sobre-container-texto-logos-machine-logo-explicacao-titulo > h2{
+    border-bottom: 2px solid #F4F5F9; 
+}
+
+.main-sobre-container-texto-logos-machine-logo-explicacao > p {
+    width: 90%;
+    height: 70%;
+    font-size: 0.86rem;
+    color: #F4F5F9;
+}
+
+.main-sobre-container-texto-logos-image{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+}
+
+.main-sobre-container-texto-logos-image-logo{
+    width: 75%;
+    height: 80%;
+    background-image: url(../Image/image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    cursor: pointer;
+}
+
+.main-sobre-container-texto-logos-image-logo-explicacao{
+    display: none;
+}
+
+.main-sobre-container-texto-logos-image-logo:hover .main-sobre-container-texto-logos-image-logo-explicacao{
+    width: 50%;
+    height: 45%;
+    border-radius: 0px 15px 15px 15px;
+    background-color: #B098C1;
+    display: flex;
+    position: absolute;
+    bottom: -35%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.main-sobre-container-texto-logos-image-logo-explicacao-titulo{
+    width: 90%;
+    height: 25%;
+    color: #F4F5F9;
+}
+
+.main-sobre-container-texto-logos-image-logo-explicacao-titulo > h2{
+    border-bottom: 2px solid #F4F5F9; 
+}
+
+.main-sobre-container-texto-logos-image-logo-explicacao > p {
+    width: 90%;
+    height: 70%;
+    font-size: 0.86rem;
+    color: #F4F5F9;
+}
+
+.main-atuacoes{
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-atuacoes-titulo{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-atuacoes-titulo > h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.main-atuacoes-container{
+    width: 100%;
+    height: 85%;
+    background-color: #F9F9F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ 
+}
+
+.main-atuacoes-container-cima{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.main-atuacoes-container-cima-container{
+    width: 45%;
+    height: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* #container-cima{
+    height: 50%;
+    background-color: red;
+} */
+
+.main-atuacoes-container-cima-container-img{
+    width: 30%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.main-atuacoes-container-cima-container-img > img{
+    width: 95%;
+
+}
+
+#logo-ufc{
+    height: 85%;
+    width: 70%;
+}
+
+.main-atuacoes-container-cima-container > h3{
+    width: 80%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    color: #B098C1;
+}
+
+.main-atuacoes-container-cima-container > p {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #333;
+}
+
+.traco{
+    width: 1px;
+    height: 80%;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: #333;
+}
+
+.main-especializacoes{
+    width: 100%;
+    height: 95vh;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.main-especializacoes-container{
+    width: 98%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main-especializacoes-container-quadrado{
+    width: 31%;
+    height: 47%;
+    background-color: #C9B5D4;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    color: #fff;
+}
+
+.main-especializacoes-container-quadrado:hover{
+    background-color: #90639E;
+    transition: 0.3s ease-in-out;
+}
+
+.main-especializacoes-container-quadrado-container{
+    width: 90%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.main-especializacoes-container-quadrado-container-quadrado{
+    width: 23%;
+    height: 68%;
+    background-color: #90639E;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-especializacoes-container-quadrado-container-quadrado > img{
+    width: 40%;
+    height: 60%;
+}
+
+.main-especializacoes-container-quadrado-titulo{
+    width: 90%;
+    height: 25%;
+}
+
+.main-especializacoes-container-quadrado-titulo > h3{
+    font-size: 1.1rem;
+}
+
+.main-especializacoes-container-quadrado-texto{
+    width: 90%;
+}
+
+.main-especializacoes-container-quadrado-texto > p {
+    font-size: 0.8rem;
+}
+
+.main-projetos{
+    width: 100%;
+    height: 240vh;
+    padding-top: 10vh;
+}
+
+.main-projetos-container{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+.main-projetos-container-quadrados{
+    width: 33.33%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+
+.main-projetos-container-quadrados > img{
+    width: 100%;
+    height: 100%;
+}
+
+.main-projetos-container-quadrados-descricao{
+    display: none;
+}
+
+.main-projetos-container-quadrados:hover .main-projetos-container-quadrados-descricao{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #3d1365dc;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    animation: opacidade 0.3s ease-in;
+
+}
+
+.main-projetos-container-quadrados-descricao-titulo{
+    width: 90%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.main-projetos-container-quadrados-descricao-titulo > h2{
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.main-projetos-container-quadrados-descricao-texto{
+    width: 85%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-projetos-container-quadrados-descricao-texto > p{
+    text-align: center;
+}
+
+.main-redes-sociais{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6e6f0;
+}
+
+.main-redes-sociais-container-principal{
+    height: 100%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.main-redes-sociais-container{
+    width: 15%;
+    height: 45%;
+
+    display: flex;
+    align-items: center;
+
+}
+
+
+.main-redes-sociais-container > img{
+    width: 30%;
+    height: 70%;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+.main-redes-sociais-container > h2{
+    font-size: 2rem;
+    color: #ABABAB;
+    cursor: pointer;
+}
+
+.main-orientacoes-cientificas{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-orientacoes-cientificas-container{
+    width: 98%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-orientacoes-cientificas-container-quadrado{
+    width: 31%;
+    height: 73%;
+    background-color: #C9B5D4;;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    color: #fff;
+}
+
+.main-orientacoes-cientificas-container-quadrado:hover{
+    background-color: #90639E;
+    transition: 0.3s ease-in-out;
+}
+
+.main-orientacoes-cientificas-container-quadrado-container{
+    width: 90%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.main-orientacoes-cientificas-container-quadrado-container-quadrado{
+    width: 23%;
+    height: 68%;
+    background-color: #90639E;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-orientacoes-cientificas-container-quadrado-container-quadrado > img{
+    width: 40%;
+    height: 60%;
+}
+
+.main-orientacoes-cientificas-container-quadrado-titulo{
+    width: 90%;
+    height: 10%;
+}
+
+.main-orientacoes-cientificas-container-quadrado-texto{
+    width: 90%;
+}
+
+.main-orientacoes-cientificas-container-quadrado-texto > p {
+    font-size: 0.8rem;
+}
+
+.main-familia{
+    width: 100%;
+    height: 85vh;
+    padding-bottom: 10vh;
+    padding-top: 13vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-familia-titulo{
+    width: 100%;
+    height:15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.main-familia-titulo > h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.main-familia-container{
+    width: 100%;
+    height: 85%;
+    display: flex;
+}
+
+.main-familia-container-esquerdo{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-familia-container-esquerdo-foto{
+    width: 83%;
+    height: 70%;
+
+}
+
+.main-familia-container-esquerdo-foto > img{
+    width: 100%;
+    height: 100%;
+}
+
+.main-familia-container-esquerdo-titulo{
+    width: 83%;
+    color: #B098C1;
+}
+
+.main-familia-container-esquerdo-titulo > h1{
+    width: 40%;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+
+}
+
+.main-familia-container-direito{
+    width: 55%;
+    height: 100%;
+    display: flex;
+}
+
+.main-familia-container-direito-texto{
+    width: 40%;
+    height: 100%;
+
+}
+
+.main-familia-container-direito-texto > h2{
+    height: 9%;
+    color: #B098C1;
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+
+.main-familia-container-direito-texto > p{
+    width: 80%;
+}
+
+.main-familia-container-direito-imagens{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.main-familia-container-direito-imagens-um{
+    width: 80%;
+    height: 48%;
+    background-color: blueviolet;
+}
+
+.main-familia-container-direito-imagens-um > img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =================================== RESPONSIVO ================================== */
+
+@media screen and (max-width: 992px) {
+
+    #header{
+        display: none;
+    }
+
+    #header-hambuguer{
+        display: flex;
+    }
+
+    .opcoes > ul > li > a{
+        font-size: 1.2rem;
+    }
+
+    .main-sobre{
+        height: 100vh;
+    }
+
+    .main-inicio-continuar > a{
+        width: 5%;
+    }
+
+    .main-sobre-container{
+        flex-direction: column;
+    }
+
+    .main-sobre-container-foto{
+        width: 60%;
+    }
+
+    .main-sobre-container-texto{
+        width: 65%;
+    }
+
+    .main-sobre-container-texto-logos-python-logo:hover .main-sobre-container-texto-logos-python-logo-explicacao{
+        height: 50%;
+        bottom: -45%;
+    }
+
+    .main-sobre-container-texto-logos-image-logo-explicacao-titulo{
+        font-size: 0.9rem;
+    }
+    .main-sobre-container-texto-logos-machine-logo-explicacao-titulo{
+        font-size: 0.9rem;
+    }
+
+    .main-sobre-container-texto-logos-machine-logo:hover .main-sobre-container-texto-logos-machine-logo-explicacao{
+        height: 50%;
+        bottom: -45%;
+    }
+
+    .main-sobre-container-texto-logos-image-logo:hover .main-sobre-container-texto-logos-image-logo-explicacao{
+        height: 50%;
+        bottom: -45%;
+    }
+ 
+    .main-atuacoes-container-cima{
+        flex-direction: column;
+    }
+
+    .traco{
+        display: none;
+    }
+
+    .main-projetos{
+        height: 260vh;
+    }
+
+    .main-projetos-container-quadrados{
+        width: 50%;
+        height: 17%;
+    }
+
+    .main-especializacoes{
+        height: 165vh;
+    }
+
+    .main-especializacoes-container-quadrado{
+        width: 60%;
+        height: 19%;
+    }
+
+    .main-orientacoes-cientificas{
+        height: 74vh;
+    }
+
+    .main-orientacoes-cientificas-container-quadrado{
+        width: 48%;
+        height: 45%;
+    }
+
+    .main-orientacoes-cientificas-container-quadrado-container-quadrado{
+        width: 27%;
+    }
+
+    #container-cima{
+        height: 65%;
+
+
+    }
+
+    #container-baixo{
+        height: 35%;
+
+    }
+
+    #logo-ufc{
+        height: 60%;
+    }
+
+    .main-redes-sociais{
+        height: 15vh;
+    }
+
+    .main-redes-sociais-container-principal{
+        width: 90%;
+    }
+
+    .main-redes-sociais-container > img{
+        height: 55%;
+    }
+
+    .main-redes-sociais-container > h2{
+        font-size: 1.3rem;
+    }
+    
+    .main-familia{
+        height: 160vh;
+        padding-bottom: 5vh;
+    }
+
+    .main-familia-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-familia-container-esquerdo{
+        width: 80%;
+    }
+
+    .main-familia-container-direito{
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 568px){
+    .hamburguer-logo{
+        width: 27%;
+    }
+
+    
+
+    .main-sobre{
+        height: 160vh;
+    }
+
+    .main-sobre-container{
+        width: 90%;
+    }
+
+    .main-sobre-container-foto{
+        width: 90%;
+        height: 50%;
+    }
+
+    .main-sobre-container-foto-container{
+        height: 70%;
+    }
+
+    .main-sobre-container-texto{
+        width: 90%;
+    }
+
+    .main-atuacoes{
+        height: 200vh;
+        
+    }
+
+    .main-atuacoes-container-cima-container{
+        width: 100%;
+    }
+
+    .main-atuacoes-container{
+        height: 90%;
+    }
+
+    
+    #container-cima{
+        height: 65%;
+
+        display: flex;
+        align-items: start;
+    }
+
+    #container-baixo{
+        height: 35%;
+
+    }
+
+    #logo-ufc{
+        height: 65%;
+    }
+
+    .main-projetos{
+        height: 535vh;
+
+    }
+
+    .main-projetos-container-quadrados{
+        width: 100%;
+        height: 8.6%;
+    }
+
+    .main-especializacoes{
+        height: 235vh;
+    }
+
+    .main-especializacoes-container-quadrado{
+        width: 90%;
+        height: 19%;
+    }
+
+    .main-especializacoes-container-quadrado-container{
+        width: 90%;
+        height: 30%; 
+    
+    }
+    
+    .main-especializacoes-container-quadrado-container-quadrado{
+        width: 26%;
+        height: 70%;
+
+    }
+
+    .main-especializacoes-container-quadrado-titulo{
+        height: 25%;
+    }
+
+    .main-redes-sociais{
+        height: 15vh;
+    }
+
+    .main-redes-sociais-container{
+        height: 60%;
+    }
+
+    .main-redes-sociais-container > img{
+        width: 75%;
+    }
+
+    .main-redes-sociais-container > h2{
+        display: none;
+    }
+
+    .main-orientacoes-cientificas{
+        height: 160vh;
+    }
+
+    .main-orientacoes-cientificas-container-quadrado{
+        width: 90%;
+        height: 25%;
+    }
+
+    .main-orientacoes-cientificas-container-quadrado-container{
+        width: 90%;
+        height: 35%; 
+    
+    }
+    
+    .main-orientacoes-cientificas-container-quadrado-container-quadrado{
+        width: 26%;
+        height: 68%;
+
+    }
+
+
+    .main-atuacoes-titulo > h2{
+        width: 80%;
+        text-align: center;
+    }
+
+    .main-familia{
+        height: 180vh;
+        padding-bottom: 5vh;
+    }
+
+    .main-familia-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-familia-container-esquerdo{
+        width: 98%;
+        height: 45%;
+    }
+
+    .main-familia-container-esquerdo-foto{
+        height: 65%;
+    }
+
+    .main-familia-container-direito{
+        width: 98%;
+        height: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-familia-container-direito-texto{
+        width: 80%;
+        height: 22%;
+    }
+
+    .main-familia-container-direito-texto > h2{
+        height: 20%;
+    }
+
+    .main-familia-container-direito-texto > p {
+        font-size: 0.8rem;
+    }
+
+    .main-familia-container-direito-imagens{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 414px) {
+    .hamburguer-logo > img{
+        height: 60%;
+    }
+
+    .main-sobre{
+        height: 140vh;
+    }
+
+    .main-sobre-container-texto-logos-image-logo:hover .main-sobre-container-texto-logos-image-logo-explicacao{
+        height: 35%;
+        width: 60%;
+        bottom: -20%;
+
+    }
+
+    .main-sobre-container-texto-logos-machine-logo:hover .main-sobre-container-texto-logos-machine-logo-explicacao{
+        height: 35%;
+        width: 60%;
+        bottom: -20%;
+    }
+
+    .main-sobre-container-texto-logos-python-logo:hover .main-sobre-container-texto-logos-python-logo-explicacao{
+        height: 35%;
+        width: 60%;
+        bottom: -20%;
+    }
+
+    .main-sobre-container-texto-logos-image-logo-explicacao-titulo{
+        height: 30%;
+    }
+
+    .main-sobre-container-texto-logos-machine-logo-explicacao-titulo{
+        height: 30%;
+    }
+
+    #logo-ufc{
+        height: 55%;
+    }
+
+    .main-especializacoes{
+        height: 160vh;
+    }
+
+    .main-especializacoes-container-quadrado{
+        height: 23%;
+    }
+
+    .main-atuacoes-titulo{
+        height: 5%;
+    }
+
+    .main-orientacoes-cientificas{
+        height: 120vh;
+    }
+
+    .main-orientacoes-cientificas-container-quadrado{
+        height: 28%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .main-sobre{
+        height: 120vh;
+    }
+
+    .main-sobre-container-texto-logos-image-logo:hover .main-sobre-container-texto-logos-image-logo-explicacao{
+        height: 38%;
+        width: 60%;
+        bottom: -33%
+
+    }
+
+    .main-sobre-container-texto-logos-machine-logo:hover .main-sobre-container-texto-logos-machine-logo-explicacao{
+        height: 38%;
+        width: 60%;
+        bottom: -33%
+    }
+
+    .main-sobre-container-texto-logos-python-logo:hover .main-sobre-container-texto-logos-python-logo-explicacao{
+        height: 38%;
+        width: 60%;
+        bottom: -33%;
+    }
+}
+
+@media screen and (max-width: 393px){
+    .main-sobre-container-texto-logos-image-logo:hover .main-sobre-container-texto-logos-image-logo-explicacao{
+        height: 38%;
+        width: 60%;
+        bottom: -25%
+
+    }
+
+    .main-sobre-container-texto-logos-machine-logo:hover .main-sobre-container-texto-logos-machine-logo-explicacao{
+        height: 38%;
+        width: 60%;
+        bottom: -25%
+    }
+
+    .main-sobre-container-texto-logos-python-logo:hover .main-sobre-container-texto-logos-python-logo-explicacao{
+        height: 38%;
+        width: 60%;
+        bottom: -25%
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .main-familia{
+        padding-bottom: 10vh;
+    }
+
+}
+
+@media screen and (max-width: 280px) {
+    .main-familia-titulo{
+        height: 10%;
+    }
+
+    .main-familia-container-esquerdo-titulo > h1{
+        font-size: 2rem;
+    }
+
+    .main-familia-container-direito-texto{
+        height: 35%;
+    }
+    .main-familia-container-direito-texto > h2{
+        font-size: 1.4rem;
+    }
+
+}
+
+
+
+
+@keyframes opacidade {
+    0%{
+        opacity: 0;
+    }   
+    100%{
+        opacity: 100%;
+    }
+}
